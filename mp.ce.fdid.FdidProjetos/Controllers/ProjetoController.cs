@@ -39,7 +39,7 @@ namespace mp.ce.fdid.FdidProjetos.Controllers
 
                 if (IDProjeto != 0)
                 {
-                    //_projetoRepository.SendEmail(IDProjeto);
+                    _projetoRepository.SendEmail(IDProjeto, 1);
                     return 1;
                 }
                 else
@@ -61,7 +61,7 @@ namespace mp.ce.fdid.FdidProjetos.Controllers
             {
                 if (_projetoRepository.UpdateProjeto(_projeto))
                 {
-                    //_projetoRepository.SendEmail(_projeto.ID);
+                    _projetoRepository.SendEmail(_projeto.ID, 2);
 
                     return 1;
                 }

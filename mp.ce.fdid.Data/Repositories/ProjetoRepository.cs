@@ -182,7 +182,7 @@ namespace mp.ce.fdid.Data.Repositories
             return list;
         }
 
-        public void SendEmail(int IDProjeto)
+        public void SendEmail(int IDProjeto, int iTipo)
         {
             string _body = "";
             string strBody = "";
@@ -349,7 +349,15 @@ namespace mp.ce.fdid.Data.Repositories
             strBody = strBody + "</body>";
             strBody = strBody + "</html>";
 
-            Diversos.SendEmail(config.GetSection(key: "Config")["sEmailSend"], "Cadastro de Projetos FDID", strBody, _anexos);
+            string sTitulo;
+
+            if (iTipo == 1) {
+                sTitulo = "Cadastro de Projetos FDID";
+            } else {
+                sTitulo = "Atualização do Projetos FDID";
+            }
+
+            Diversos.SendEmail(config.GetSection(key: "Config")["sEmailSend"], sTitulo, strBody, _anexos);
         }
     }
 }
