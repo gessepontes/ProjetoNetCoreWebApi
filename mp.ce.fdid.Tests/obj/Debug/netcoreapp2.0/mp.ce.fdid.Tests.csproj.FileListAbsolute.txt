@@ -1,0 +1,14 @@
+C:\SVN\FDID\Fdid\mp.ce.fdid.Tests\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\SVN\FDID\Fdid\mp.ce.fdid.Tests\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+C:\SVN\FDID\Fdid\mp.ce.fdid.Tests\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+C:\SVN\FDID\Fdid\mp.ce.fdid.Tests\bin\Debug\netcoreapp2.0\mp.ce.fdid.Tests.deps.json
+C:\SVN\FDID\Fdid\mp.ce.fdid.Tests\bin\Debug\netcoreapp2.0\mp.ce.fdid.Tests.runtimeconfig.json
+C:\SVN\FDID\Fdid\mp.ce.fdid.Tests\bin\Debug\netcoreapp2.0\mp.ce.fdid.Tests.runtimeconfig.dev.json
+C:\SVN\FDID\Fdid\mp.ce.fdid.Tests\bin\Debug\netcoreapp2.0\mp.ce.fdid.Tests.dll
+C:\SVN\FDID\Fdid\mp.ce.fdid.Tests\bin\Debug\netcoreapp2.0\mp.ce.fdid.Tests.pdb
+C:\SVN\FDID\Fdid\mp.ce.fdid.Tests\obj\Debug\netcoreapp2.0\mp.ce.fdid.Tests.csprojResolveAssemblyReference.cache
+C:\SVN\FDID\Fdid\mp.ce.fdid.Tests\obj\Debug\netcoreapp2.0\mp.ce.fdid.Tests.csproj.CoreCompileInputs.cache
+C:\SVN\FDID\Fdid\mp.ce.fdid.Tests\obj\Debug\netcoreapp2.0\mp.ce.fdid.Tests.AssemblyInfoInputs.cache
+C:\SVN\FDID\Fdid\mp.ce.fdid.Tests\obj\Debug\netcoreapp2.0\mp.ce.fdid.Tests.AssemblyInfo.cs
+C:\SVN\FDID\Fdid\mp.ce.fdid.Tests\obj\Debug\netcoreapp2.0\mp.ce.fdid.Tests.dll
+C:\SVN\FDID\Fdid\mp.ce.fdid.Tests\obj\Debug\netcoreapp2.0\mp.ce.fdid.Tests.pdb

@@ -1,0 +1,11 @@
+C:\SVN\FDID\Fdid\mp.ce.fdid.Domain\bin\Debug\netstandard2.0\mp.ce.fdid.Domain.deps.json
+C:\SVN\FDID\Fdid\mp.ce.fdid.Domain\bin\Debug\netstandard2.0\mp.ce.fdid.Domain.dll
+C:\SVN\FDID\Fdid\mp.ce.fdid.Domain\bin\Debug\netstandard2.0\mp.ce.fdid.Domain.pdb
+C:\SVN\FDID\Fdid\mp.ce.fdid.Domain\obj\Debug\netstandard2.0\mp.ce.fdid.Domain.csprojResolveAssemblyReference.cache
+C:\SVN\FDID\Fdid\mp.ce.fdid.Domain\obj\Debug\netstandard2.0\mp.ce.fdid.Domain.csproj.CoreCompileInputs.cache
+C:\SVN\FDID\Fdid\mp.ce.fdid.Domain\obj\Debug\netstandard2.0\mp.ce.fdid.Domain.AssemblyInfoInputs.cache
+C:\SVN\FDID\Fdid\mp.ce.fdid.Domain\obj\Debug\netstandard2.0\mp.ce.fdid.Domain.AssemblyInfo.cs
+C:\SVN\FDID\Fdid\mp.ce.fdid.Domain\obj\Debug\netstandard2.0\mp.ce.fdid.Domain.dll
+C:\SVN\FDID\Fdid\mp.ce.fdid.Domain\obj\Debug\netstandard2.0\mp.ce.fdid.Domain.pdb
+C:\SVN\FDID\Fdid\mp.ce.fdid.Domain\bin\Debug\netstandard2.0\Microsoft.AspNetCore.Http.Features.dll
+C:\SVN\FDID\Fdid\mp.ce.fdid.Domain\bin\Debug\netstandard2.0\Microsoft.AspNetCore.Http.Features.xml

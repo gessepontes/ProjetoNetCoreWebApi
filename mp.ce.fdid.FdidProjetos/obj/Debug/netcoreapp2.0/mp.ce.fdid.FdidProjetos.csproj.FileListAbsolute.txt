@@ -1,0 +1,17 @@
+C:\SVN\FDID\Fdid\mp.ce.fdid.FdidProjetos\bin\Debug\netcoreapp2.0\mp.ce.fdid.FdidProjetos.deps.json
+C:\SVN\FDID\Fdid\mp.ce.fdid.FdidProjetos\bin\Debug\netcoreapp2.0\mp.ce.fdid.FdidProjetos.runtimeconfig.json
+C:\SVN\FDID\Fdid\mp.ce.fdid.FdidProjetos\bin\Debug\netcoreapp2.0\mp.ce.fdid.FdidProjetos.runtimeconfig.dev.json
+C:\SVN\FDID\Fdid\mp.ce.fdid.FdidProjetos\bin\Debug\netcoreapp2.0\mp.ce.fdid.FdidProjetos.dll
+C:\SVN\FDID\Fdid\mp.ce.fdid.FdidProjetos\bin\Debug\netcoreapp2.0\mp.ce.fdid.FdidProjetos.pdb
+C:\SVN\FDID\Fdid\mp.ce.fdid.FdidProjetos\obj\Debug\netcoreapp2.0\mp.ce.fdid.FdidProjetos.csprojResolveAssemblyReference.cache
+C:\SVN\FDID\Fdid\mp.ce.fdid.FdidProjetos\obj\Debug\netcoreapp2.0\mp.ce.fdid.FdidProjetos.csproj.CoreCompileInputs.cache
+C:\SVN\FDID\Fdid\mp.ce.fdid.FdidProjetos\obj\Debug\netcoreapp2.0\mp.ce.fdid.FdidProjetos.AssemblyInfoInputs.cache
+C:\SVN\FDID\Fdid\mp.ce.fdid.FdidProjetos\obj\Debug\netcoreapp2.0\mp.ce.fdid.FdidProjetos.AssemblyInfo.cs
+C:\SVN\FDID\Fdid\mp.ce.fdid.FdidProjetos\obj\Debug\netcoreapp2.0\mp.ce.fdid.FdidProjetos.dll
+C:\SVN\FDID\Fdid\mp.ce.fdid.FdidProjetos\obj\Debug\netcoreapp2.0\mp.ce.fdid.FdidProjetos.pdb
+C:\SVN\FDID\Fdid\mp.ce.fdid.FdidProjetos\bin\Debug\netcoreapp2.0\mp.ce.fdid.Domain.dll
+C:\SVN\FDID\Fdid\mp.ce.fdid.FdidProjetos\bin\Debug\netcoreapp2.0\mp.ce.fdid.Domain.pdb
+C:\SVN\FDID\Fdid\mp.ce.fdid.FdidProjetos\bin\Debug\netcoreapp2.0\mp.ce.fdid.Data.dll
+C:\SVN\FDID\Fdid\mp.ce.fdid.FdidProjetos\bin\Debug\netcoreapp2.0\mp.ce.fdid.IoC.dll
+C:\SVN\FDID\Fdid\mp.ce.fdid.FdidProjetos\bin\Debug\netcoreapp2.0\mp.ce.fdid.IoC.pdb
+C:\SVN\FDID\Fdid\mp.ce.fdid.FdidProjetos\bin\Debug\netcoreapp2.0\mp.ce.fdid.Data.pdb
