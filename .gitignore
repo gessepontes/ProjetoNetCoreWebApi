@@ -1,0 +1,5 @@
+﻿################################################################################
+# Este arquivo .gitignore foi criado automaticamente pelo Microsoft(R) Visual Studio.
+################################################################################
+
+/mp.ce.fdid.FdidProjetos/obj/Release/netcoreapp2.0/PubTmp/Out/wwwroot/doc
