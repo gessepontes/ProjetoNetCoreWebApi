@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using mp.ce.fdid.Domain.Diversos;
@@ -85,6 +86,7 @@ namespace mp.ce.fdid.FdidProjetos.Controllers
 
          // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
+        [Authorize]
         public int Delete(int id)
         {
             try

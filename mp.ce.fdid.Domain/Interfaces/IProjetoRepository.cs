@@ -1,5 +1,6 @@
 ﻿using mp.ce.fdid.Domain.Entities;
 using mp.ce.fdid.Domain.Interfaces.Repositories.Common;
+using System.Collections.Generic;
 
 namespace mp.ce.fdid.Domain.Interfaces
 {
@@ -9,5 +10,6 @@ namespace mp.ce.fdid.Domain.Interfaces
         bool UpdateProjeto(Projeto obj);
         bool RemoveProjeto(Projeto obj);
         void SendEmail(int IDProjeto, int iTipo);
+        IEnumerable<Projeto> GetByIdIsntituicao(int id);
     }
 }

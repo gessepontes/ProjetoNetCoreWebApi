@@ -50,10 +50,10 @@ namespace mp.ce.fdid.Domain.Diversos
             switch (origem)
             {
                 case "INSTITUICAO":
-                    path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\images\\instituicao", sFoto);
+                    path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\doc\\instituicao", sFoto);
                     break;
                 case "PROJETO":
-                    path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\images\\projeto", sFoto);
+                    path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\doc\\projeto", sFoto);
                     break;
             }
 
@@ -143,14 +143,6 @@ namespace mp.ce.fdid.Domain.Diversos
 
                 mailMessage.AlternateViews.Add(view);
                 mailMessage.Priority = MailPriority.Normal;
-
-                //SmtpClient client = new SmtpClient("smtp.office365.com")
-                //{
-                //    UseDefaultCredentials = false,
-                //    Credentials = new NetworkCredential("sistemas.setin@mpce.mp.br", "em@il_sist3mas"),
-                //    Port = 587,
-                //    EnableSsl = true
-                //};
 
                 SmtpClient client = new SmtpClient("pgjsrv129",25);
                 client.UseDefaultCredentials = true;

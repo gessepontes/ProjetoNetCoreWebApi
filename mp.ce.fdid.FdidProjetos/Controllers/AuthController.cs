@@ -1,6 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
 using mp.ce.fdid.Domain.Entities;
 using mp.ce.fdid.Domain.Interfaces;
+using System;
+using System.IdentityModel.Tokens.Jwt;
+using System.IO;
+using System.Security.Claims;
+using System.Text;
 
 namespace mp.ce.fdid.FdidProjetos.Controllers
 {
@@ -52,6 +59,61 @@ namespace mp.ce.fdid.FdidProjetos.Controllers
         {
             return _instituicaoRepository.GetChangerPassword(cnpj, password);
         }
+
+        //[HttpGet("token")]
+        //public IActionResult GetToken()
+        //{
+        //    var config = new ConfigurationBuilder()
+        //            .SetBasePath(Directory.GetCurrentDirectory())
+        //            .AddJsonFile("appsettings.json")
+        //            .Build();
+
+
+        //    var claims = new[]
+        //        {
+        //          new Claim(JwtRegisteredClaimNames.Sub, "Fdid"),
+        //          new Claim(JwtRegisteredClaimNames.Jti, System.Guid.NewGuid().ToString()),
+        //        };
+
+        //    var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config.GetSection(key: "Config")["SecretKey"]));
+        //    var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+        //    var token = new JwtSecurityToken(
+        //          issuer: config.GetSection(key: "Config")["Issuer"],
+        //          audience: config.GetSection(key: "Config")["Issuer"],
+        //          claims: claims,
+        //          expires: DateTime.UtcNow.AddMinutes(Convert.ToInt16(config.GetSection(key: "Config")["JwtExpireMinutes"])),
+        //          signingCredentials: creds);
+
+        //    var tokenEncoded = new JwtSecurityTokenHandler().WriteToken(token);
+
+        //    return new OkObjectResult(new { token = tokenEncoded });
+        //}
+
+        [HttpGet("token/{user}")]
+        public string GetBuildToken(string user)
+        {
+
+            var config = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .Build();
+
+            var claims = new[]
+                {
+                  new Claim(JwtRegisteredClaimNames.Sub, user),
+                };
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config.GetSection(key: "Config")["SecretKey"]));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var token = new JwtSecurityToken(config.GetSection(key: "Config")["Issuer"], config.GetSection(key: "Config")["Issuer"],
+              expires: DateTime.Now.AddMinutes(30),
+              signingCredentials: creds);
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
 
 
     }

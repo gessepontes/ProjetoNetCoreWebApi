@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using mp.ce.fdid.Domain.Entities;
 using mp.ce.fdid.Domain.Interfaces;
@@ -24,13 +25,22 @@ namespace mp.ce.fdid.FdidProjetos.Controllers
 
         // GET: api/Projeto/5
         [HttpGet("{id}", Name = "GetProjetoID")]
+        [Authorize]
         public Projeto Get(int id)
         {
             return _projetoRepository.GetById(id);
         }
 
+        [HttpGet("GetByIdIsntituicao/{id}", Name = "GetByIdIsntituicao")]
+        [Authorize]
+        public IEnumerable<Projeto> GetByIdIsntituicao(int id)
+        {
+            return _projetoRepository.GetByIdIsntituicao(id);
+        }
+
         // POST: api/Projeto
         [HttpPost]
+        [Authorize]
         public int Post([FromBody]Projeto _projeto)
         {
             try
@@ -55,6 +65,7 @@ namespace mp.ce.fdid.FdidProjetos.Controllers
 
         // PUT: api/Projeto/5
         [HttpPut]
+        [Authorize]
         public int Put([FromBody]Projeto _projeto)
         {
             try
@@ -78,6 +89,7 @@ namespace mp.ce.fdid.FdidProjetos.Controllers
 
         // DELETE: api/Projeto/5
         [HttpDelete("{id}")]
+        [Authorize]
         public int Delete(int id)
         {
             try

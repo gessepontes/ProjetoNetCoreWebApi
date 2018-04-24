@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\docs\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.1" />
   </ItemGroup>
@@ -21,5 +17,7 @@
     <ProjectReference Include="..\mp.ce.fdid.Domain\mp.ce.fdid.Domain.csproj" />
     <ProjectReference Include="..\mp.ce.fdid.IoC\mp.ce.fdid.IoC.csproj" />
   </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties Properties_4launchSettings_1json__JSONSchema="" /></VisualStudio></ProjectExtensions>
 
 </Project>

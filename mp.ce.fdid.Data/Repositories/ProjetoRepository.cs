@@ -172,15 +172,19 @@ namespace mp.ce.fdid.Data.Repositories
 
             List<int> termsList = new List<int>();
 
-            foreach (var item in conn.Query("select iArea from TB_AREAPROJETO WHERE IDProjeto =@IDProjeto", new { IDProjeto = list.ID }).ToList())
-            {
-                termsList.Add(item.iArea);
-            }
+            if (list != null) {
+                foreach (var item in conn.Query("select iArea from TB_AREAPROJETO WHERE IDProjeto =@IDProjeto", new { IDProjeto = list.ID }).ToList())
+                {
+                    termsList.Add(item.iArea);
+                }
 
-            list.sArea = termsList;
+                list.sArea = termsList;
+            }
 
             return list;
         }
+
+        public IEnumerable<Projeto> GetByIdIsntituicao(int id) => conn.Query<Projeto>(@"SELECT * FROM TB_PROJETOS P WHERE P.idInstituicao = @id", new { id }).ToList();
 
         public void SendEmail(int IDProjeto, int iTipo)
         {

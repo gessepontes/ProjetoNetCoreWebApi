@@ -1,0 +1,15 @@
+C:\SVN\FDID\Fdid\mp.ce.fdid.Data\bin\Release\netstandard2.0\mp.ce.fdid.Data.deps.json
+C:\SVN\FDID\Fdid\mp.ce.fdid.Data\bin\Release\netstandard2.0\mp.ce.fdid.Data.dll
+C:\SVN\FDID\Fdid\mp.ce.fdid.Data\bin\Release\netstandard2.0\mp.ce.fdid.Data.pdb
+C:\SVN\FDID\Fdid\mp.ce.fdid.Data\bin\Release\netstandard2.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\SVN\FDID\Fdid\mp.ce.fdid.Data\bin\Release\netstandard2.0\mp.ce.fdid.Domain.dll
+C:\SVN\FDID\Fdid\mp.ce.fdid.Data\bin\Release\netstandard2.0\Microsoft.AspNetCore.Http.Features.dll
+C:\SVN\FDID\Fdid\mp.ce.fdid.Data\bin\Release\netstandard2.0\mp.ce.fdid.Domain.pdb
+C:\SVN\FDID\Fdid\mp.ce.fdid.Data\bin\Release\netstandard2.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.xml
+C:\SVN\FDID\Fdid\mp.ce.fdid.Data\bin\Release\netstandard2.0\Microsoft.AspNetCore.Http.Features.xml
+C:\SVN\FDID\Fdid\mp.ce.fdid.Data\obj\Release\netstandard2.0\mp.ce.fdid.Data.csprojResolveAssemblyReference.cache
+C:\SVN\FDID\Fdid\mp.ce.fdid.Data\obj\Release\netstandard2.0\mp.ce.fdid.Data.csproj.CoreCompileInputs.cache
+C:\SVN\FDID\Fdid\mp.ce.fdid.Data\obj\Release\netstandard2.0\mp.ce.fdid.Data.AssemblyInfoInputs.cache
+C:\SVN\FDID\Fdid\mp.ce.fdid.Data\obj\Release\netstandard2.0\mp.ce.fdid.Data.AssemblyInfo.cs
+C:\SVN\FDID\Fdid\mp.ce.fdid.Data\obj\Release\netstandard2.0\mp.ce.fdid.Data.dll
+C:\SVN\FDID\Fdid\mp.ce.fdid.Data\obj\Release\netstandard2.0\mp.ce.fdid.Data.pdb

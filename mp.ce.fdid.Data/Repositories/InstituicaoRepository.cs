@@ -17,6 +17,46 @@ namespace mp.ce.fdid.Data.Repositories
     public class InstituicaoRepository : RepositoryBase<Instituicao>, IInstituicaoRepository
     {
 
+        public override void Add(Instituicao obj)
+        {
+            string sql = "";
+
+            sql = "INSERT INTO TB_INSTITUICAO VALUES (@sProponente,@sCNPJ,@sEndereco,@sCep,@sTelefone,@sFax,@IDCidade,@sEmail,@sHomePage,@iRegime,@iEsfera,@sRepresentante,@sCpfRepresentante," +
+                "@sCargo,@sFuncao,@sRG,@sOrgaoExpedidor,@sEnderecoRepresentante,@sTelefoneRepresentante,@sCepRepresentante,@sCoordenador," +
+                "@sCPFCoordenador,@sTelefoneCoordenador,@sFaxCoordenador,getdate(),@sSenha,getdate(),'',null)";
+
+            conn.Execute(sql, new
+            {
+                obj.sProponente,
+                obj.sCNPJ,
+                obj.sEndereco,
+                obj.sCep,
+                obj.sTelefone,
+                obj.sFax,
+                obj.IDCidade,
+                obj.sEmail,
+                obj.sHomePage,
+                obj.iRegime,
+                obj.iEsfera,
+                obj.sRepresentante,
+                obj.sCpfRepresentante,
+                obj.sCargo,
+                obj.sFuncao,
+                obj.sRG,
+                obj.sOrgaoExpedidor,
+                obj.sEnderecoRepresentante,
+                obj.sTelefoneRepresentante,
+                obj.sCepRepresentante,
+                obj.sCoordenador,
+                obj.sCPFCoordenador,
+                obj.sTelefoneCoordenador,
+                obj.sFaxCoordenador,
+                obj.sSenha,
+                obj.ID
+            });
+        }
+
+
         public override void Update(Instituicao obj)
         {
             string sql = "";

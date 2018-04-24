@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using mp.ce.fdid.Domain.Entities;
 using mp.ce.fdid.Domain.Interfaces;
@@ -20,6 +20,7 @@ namespace mp.ce.fdid.FdidProjetos.Controllers
 
         // GET: api/Instituicao/5
         [HttpGet("{id}")]
+        [Authorize]
         public Instituicao Get(int id)
         {
             return _instituicaoRepository.GetById(id);
@@ -43,6 +44,7 @@ namespace mp.ce.fdid.FdidProjetos.Controllers
 
         // PUT: api/Instituicao
         [HttpPut]
+        [Authorize]
         public int Put([FromBody]Instituicao _instituicao)
         {
             try
@@ -59,6 +61,7 @@ namespace mp.ce.fdid.FdidProjetos.Controllers
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
+        [Authorize]
         public int Delete(int id)
         {
             try

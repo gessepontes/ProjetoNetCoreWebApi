@@ -7,6 +7,11 @@ using System.IO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.Extensions.FileProviders;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using System;
+using System.Threading.Tasks;
 
 namespace mp.ce.fdid.FdidProjetos
 {
@@ -28,6 +33,35 @@ namespace mp.ce.fdid.FdidProjetos
 
             services.AddSingleton<ITempDataProvider, CookieTempDataProvider>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            .AddJwtBearer(options => {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = Configuration.GetSection(key: "Config")["Issuer"],
+                    ValidAudience = Configuration.GetSection(key: "Config")["Issuer"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Configuration.GetSection(key: "Config")["SecretKey"]))
+                };
+
+                options.Events = new JwtBearerEvents
+                {
+                    OnAuthenticationFailed = context =>
+                    {
+                        Console.WriteLine("OnAuthenticationFailed: " + context.Exception.Message);
+                        return Task.CompletedTask;
+                    },
+                    OnTokenValidated = context =>
+                    {
+                        Console.WriteLine("OnTokenValidated: " + context.SecurityToken);
+                        return Task.CompletedTask;
+                    }
+                };
+            });
 
             services.AddMvc();
             services.RegisterServices();
@@ -56,6 +90,8 @@ namespace mp.ce.fdid.FdidProjetos
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseAuthentication();
 
             // Shows UseCors with named policy.
             app.UseCors("AllowAll");
