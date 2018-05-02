@@ -361,7 +361,7 @@ namespace mp.ce.fdid.Data.Repositories
                 sTitulo = "Atualização do Projetos FDID";
             }
 
-            Diversos.SendEmail(config.GetSection(key: "Config")["sEmailSend"], sTitulo, strBody, _anexos);
+            Diversos.SendEmail(config.GetSection(key: "Config")["sEmailSend"], sTitulo, strBody, _anexos, _projeto.Instituicao.sEmail);
         }
     }
 }

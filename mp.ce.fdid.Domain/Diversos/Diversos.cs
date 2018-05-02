@@ -119,7 +119,7 @@ namespace mp.ce.fdid.Domain.Diversos
         }
 
 
-        public static bool SendEmail(string _to, string _subject, string _body, List<string> _anexos)
+        public static bool SendEmail(string _to, string _subject, string _body, List<string> _anexos, string _cc)
         {
             try
             {
@@ -133,6 +133,14 @@ namespace mp.ce.fdid.Domain.Diversos
                 {
                     IsBodyHtml = true
                 };
+
+
+                if (_cc != null)
+                {
+                    MailAddress cc = new MailAddress(_cc);
+                    mailMessage.CC.Add(cc);
+                }
+
 
                 if (_anexos != null) {
                     foreach (string item in _anexos)

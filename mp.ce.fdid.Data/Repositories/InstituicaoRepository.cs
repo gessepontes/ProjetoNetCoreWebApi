@@ -202,7 +202,7 @@ namespace mp.ce.fdid.Data.Repositories
                 strBody = strBody + "</body>";
                 strBody = strBody + "</html>";
 
-                Diversos.SendEmail(_instituicao.sEmail, "Mudança de senha FDID", strBody, null);
+                Diversos.SendEmail(_instituicao.sEmail, "Mudança de senha FDID", strBody, null, null);
 
                 return 1;
             }
