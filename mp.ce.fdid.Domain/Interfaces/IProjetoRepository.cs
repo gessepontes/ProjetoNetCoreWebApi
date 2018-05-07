@@ -9,7 +9,7 @@ namespace mp.ce.fdid.Domain.Interfaces
         int AddProjeto(Projeto obj);
         bool UpdateProjeto(Projeto obj);
         bool RemoveProjeto(Projeto obj);
-        void SendEmail(int IDProjeto, int iTipo);
+        void SendEmail(int IDInstituicaoProjeto, int iTipo);
         IEnumerable<Projeto> GetByIdIsntituicao(int id);
     }
 }

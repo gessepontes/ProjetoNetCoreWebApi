@@ -26,8 +26,7 @@ namespace mp.ce.fdid.Data.Repositories.Common
                     c.AddMap(new CidadeMap());
                     c.AddMap(new InstituicaoMap());
                     c.AddMap(new ProjetoMap());
-                    c.AddMap(new ArquivoInstituicaoMap());
-                    c.AddMap(new ArquivoProjetoMap());
+                    c.AddMap(new ArquivoMap());
                     c.AddMap(new PrazoMap());
 
                     c.ForDommel();

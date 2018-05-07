@@ -3,11 +3,11 @@ using mp.ce.fdid.Domain.Entities;
 
 namespace mp.ce.fdid.Data.Mappings
 {
-    public class ArquivoInstituicaoMap : DommelEntityMap<ArquivoInstituicao>
+    public class ArquivoMap : DommelEntityMap<Arquivo>
     {
-        public ArquivoInstituicaoMap()
+        public ArquivoMap()
         {
-            ToTable("TB_ARQUIVOINSTITUICAO");
+            ToTable("TB_ARQUIVO");
             Map(p => p.ID).IsKey().IsIdentity();
         }
     }

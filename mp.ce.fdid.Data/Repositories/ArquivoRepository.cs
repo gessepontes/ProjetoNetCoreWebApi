@@ -4,7 +4,7 @@ using mp.ce.fdid.Domain.Interfaces;
 
 namespace mp.ce.fdid.Data.Repositories
 {
-    public class ArquivoInstituicaoRepository : RepositoryBase<ArquivoInstituicao>, IArquivoInstituicaoRepository
+    public class ArquivoRepository : RepositoryBase<Arquivo>, IArquivoRepository
     {
     }
 }

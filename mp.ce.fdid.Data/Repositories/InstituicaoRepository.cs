@@ -104,8 +104,8 @@ namespace mp.ce.fdid.Data.Repositories
 
             var instituicaoDictionary = new Dictionary<int, Instituicao>();
 
-            var list = conn.Query<Instituicao, ArquivoInstituicao, Instituicao>(
-                @"SELECT C.*,CI.iCodEstado IDEstado,T.* FROM TB_INSTITUICAO C INNER JOIN TB_CIDADE CI ON CI.iCodCidade = C.IDCidade  LEFT JOIN TB_ARQUIVOINSTITUICAO T ON C.ID = T.IDInstituicao WHERE C.ID= @id",
+            var list = conn.Query<Instituicao, Arquivo, Instituicao>(
+                @"SELECT C.*,CI.iCodEstado IDEstado,T.* FROM TB_INSTITUICAO C INNER JOIN TB_CIDADE CI ON CI.iCodCidade = C.IDCidade  LEFT JOIN TB_ARQUIVO T ON C.ID = T.IDInstituicaoProjeto  AND T.iTipo=1 WHERE C.ID= @id",
                 map: (instituicao, arquivoInstituicao) =>
                 {
                     Instituicao instituicaoEntry;
@@ -113,11 +113,11 @@ namespace mp.ce.fdid.Data.Repositories
                     if (!instituicaoDictionary.TryGetValue(instituicao.ID, out instituicaoEntry))
                     {
                         instituicaoEntry = instituicao;
-                        instituicaoEntry.ArquivoInstituicao = new List<ArquivoInstituicao>();
+                        instituicaoEntry.Arquivo = new List<Arquivo>();
                         instituicaoDictionary.Add(instituicaoEntry.ID, instituicaoEntry);
                     }
 
-                    instituicaoEntry.ArquivoInstituicao.Add(arquivoInstituicao);
+                    instituicaoEntry.Arquivo.Add(arquivoInstituicao);
                     return instituicaoEntry;
                 },
                 splitOn: "ID",
@@ -130,7 +130,7 @@ namespace mp.ce.fdid.Data.Repositories
         public Instituicao GetByIdInstituicao(int IdInstituicao)
         {
             Instituicao i = GetById(IdInstituicao);
-            i.ArquivoInstituicao = conn.Query<ArquivoInstituicao>("SELECT * FROM TB_ARQUIVOINSTITUICAO WHERE IDInstituicao =@IDInstituicao ", new { IDInstituicao = IdInstituicao }).ToList();
+            i.Arquivo = conn.Query<Arquivo>("SELECT * FROM TB_ARQUIVO WHERE IDInstituicaoProjeto =@IDInstituicao AND iTipo=1", new { IDInstituicao = IdInstituicao }).ToList();
             return i;
         }
 

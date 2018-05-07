@@ -13,8 +13,7 @@ namespace mp.ce.fdid.IoC
             services.AddScoped<ICidadeRepository, CidadeRepository>();
             services.AddScoped<IEstadoRepository, EstadoRepository>();
             services.AddScoped<IProjetoRepository, ProjetoRepository>();
-            services.AddScoped<IArquivoInstituicaoRepository, ArquivoInstituicaoRepository>();
-            services.AddScoped<IArquivoProjetoRepository, ArquivoProjetoRepository>();
+            services.AddScoped<IArquivoRepository, ArquivoRepository>();
             services.AddScoped<IPrazoRepository, PrazoRepository>();
         }
 

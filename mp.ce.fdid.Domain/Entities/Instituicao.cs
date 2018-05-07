@@ -62,7 +62,7 @@ namespace mp.ce.fdid.Domain.Entities
         public Cidade Cidade { get; set; }
 
         public int IDEstado { get; set; }
-        public virtual ICollection<ArquivoInstituicao> ArquivoInstituicao { get; set; }
+        public virtual ICollection<Arquivo> Arquivo { get; set; }
         public virtual ICollection<Projeto> Projeto { get; set; }
 
     }

@@ -28,7 +28,7 @@ namespace mp.ce.fdid.Domain.Entities
         public DateTime dDataMovimentacao { get; set; }
 
         public Cidade Cidade { get; set; }
-        public virtual ICollection<ArquivoProjeto> ArquivoProjeto { get; set; }
+        public virtual ICollection<Arquivo> Arquivo { get; set; }
 
         public Instituicao Instituicao { get; set; }
     }

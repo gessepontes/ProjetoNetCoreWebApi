@@ -3,7 +3,7 @@ using mp.ce.fdid.Domain.Interfaces.Repositories.Common;
 
 namespace mp.ce.fdid.Domain.Interfaces
 {
-    public interface IArquivoProjetoRepository : IRepositoryBase<ArquivoProjeto>
+    public interface IArquivoRepository : IRepositoryBase<Arquivo>
     {
     }
 }

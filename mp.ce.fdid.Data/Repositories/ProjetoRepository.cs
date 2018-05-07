@@ -128,7 +128,7 @@ namespace mp.ce.fdid.Data.Repositories
                 try
                 {
                     conn.Execute("DELETE TB_AREAPROJETO WHERE IDProjeto = @IDProjeto; ", new { IDProjeto = obj.ID }, transaction: transaction);
-                    conn.Execute("DELETE TB_ARQUIVO WHERE IDProjeto = @IDProjeto; ", new { IDProjeto = obj.ID }, transaction: transaction);
+                    conn.Execute("DELETE TB_ARQUIVO WHERE IDInstituicaoProjeto = @IDProjeto; ", new { IDProjeto = obj.ID }, transaction: transaction);
                     conn.Execute("DELETE TB_PROJETOS WHERE ID = @ID; ", new { obj.ID }, transaction: transaction);
 
                     transaction.Commit();
@@ -149,8 +149,8 @@ namespace mp.ce.fdid.Data.Repositories
         {
             var instituicaoDictionary = new Dictionary<int, Projeto>();
 
-            var list = conn.Query<Projeto, Instituicao,  ArquivoProjeto, Projeto>(
-                @"SELECT * FROM TB_PROJETOS P INNER JOIN TB_INSTITUICAO I ON P.IDInstituicao = I.ID LEFT JOIN TB_ARQUIVO A ON P.ID = A.IDProjeto WHERE P.ID = @id",
+            var list = conn.Query<Projeto, Instituicao,  Arquivo, Projeto>(
+                @"SELECT * FROM TB_PROJETOS P INNER JOIN TB_INSTITUICAO I ON P.IDInstituicao = I.ID LEFT JOIN TB_ARQUIVO A ON P.ID = A.IDInstituicaoProjeto WHERE P.ID = @id",
                 map: (projeto, instituicao,  arquivoProjeto) =>
                 {
                     Projeto projetoEntry;
@@ -158,13 +158,13 @@ namespace mp.ce.fdid.Data.Repositories
                     if (!instituicaoDictionary.TryGetValue(projeto.ID, out projetoEntry))
                     {
                         projetoEntry = projeto;
-                        projetoEntry.ArquivoProjeto = new List<ArquivoProjeto>();
+                        projetoEntry.Arquivo = new List<Arquivo>();
                         instituicaoDictionary.Add(projetoEntry.ID, projetoEntry);
                     }
 
                     projetoEntry.Instituicao = instituicao;
 
-                    projetoEntry.ArquivoProjeto.Add(arquivoProjeto);
+                    projetoEntry.Arquivo.Add(arquivoProjeto);
                     return projetoEntry;
                 },
                 splitOn: "ID",
@@ -322,7 +322,7 @@ namespace mp.ce.fdid.Data.Repositories
 
             List<string> _anexos = new List<string>();
 
-            foreach (ArquivoProjeto item in _projeto.ArquivoProjeto)
+            foreach (Arquivo item in _projeto.Arquivo)
             {
                 if (item != null)
                 {
