@@ -17,17 +17,16 @@ namespace mp.ce.fdid.Data.Repositories.Common
 
         public RepositoryBase()
         {
-            if (FluentMapper.EntityMaps.IsEmpty)
+            if (FluentMapper.EntityMaps.Count == 0)
             {
                 FluentMapper.Initialize(c =>
                 {
-                    c.AddMap(new BancoMap());
-                    c.AddMap(new EstadoMap());
-                    c.AddMap(new CidadeMap());
-                    c.AddMap(new InstituicaoMap());
-                    c.AddMap(new ProjetoMap());
-                    c.AddMap(new ArquivoMap());
-                    c.AddMap(new PrazoMap());
+                    c.AddMap(mapper: new EstadoMap());
+                    c.AddMap(mapper: new CidadeMap());
+                    c.AddMap(mapper: new InstituicaoMap());
+                    c.AddMap(mapper: new ProjetoMap());
+                    c.AddMap(mapper: new ArquivoMap());
+                    c.AddMap(mapper: new PrazoMap());
 
                     c.ForDommel();
                 });

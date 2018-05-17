@@ -13,7 +13,8 @@
           "Dapper.FluentMap.Dommel": "1.5.0",
           "Microsoft.Extensions.Configuration.Json": "2.0.1",
           "NETStandard.Library": "2.0.1",
-          "mp.ce.fdid.Domain": "1.0.0"
+          "mp.ce.fdid.Domain": "1.0.0",
+          "Microsoft.AspNetCore.Cryptography.KeyDerivation": "2.0.1.0"
         },
         "runtime": {
           "mp.ce.fdid.Data.dll": {}
@@ -744,6 +745,11 @@
         "runtime": {
           "mp.ce.fdid.Domain.dll": {}
         }
+      },
+      "Microsoft.AspNetCore.Cryptography.KeyDerivation/2.0.1.0": {
+        "runtime": {
+          "Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {}
+        }
       }
     }
   },
@@ -1273,6 +1279,11 @@
     },
     "mp.ce.fdid.Domain/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.AspNetCore.Cryptography.KeyDerivation/2.0.1.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

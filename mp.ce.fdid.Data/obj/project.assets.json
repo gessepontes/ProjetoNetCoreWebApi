@@ -4443,7 +4443,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gesse.pontes\\.nuget\\packages\\": {},
+    "C:\\Users\\gesse.pontes.000\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -4455,14 +4455,14 @@
       "projectUniqueName": "C:\\SVN\\FDID\\Fdid\\mp.ce.fdid.Data\\mp.ce.fdid.Data.csproj",
       "projectName": "mp.ce.fdid.Data",
       "projectPath": "C:\\SVN\\FDID\\Fdid\\mp.ce.fdid.Data\\mp.ce.fdid.Data.csproj",
-      "packagesPath": "C:\\Users\\gesse.pontes\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\gesse.pontes.000\\.nuget\\packages\\",
       "outputPath": "C:\\SVN\\FDID\\Fdid\\mp.ce.fdid.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\gesse.pontes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gesse.pontes.000\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

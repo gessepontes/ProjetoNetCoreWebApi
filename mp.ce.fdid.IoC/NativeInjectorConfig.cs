@@ -8,7 +8,6 @@ namespace mp.ce.fdid.IoC
     {
         public static void RegisterServices(this IServiceCollection services)
         {
-            services.AddScoped<IBancoRepository, BancoRepository>();
             services.AddScoped<IInstituicaoRepository, InstituicaoRepository>();
             services.AddScoped<ICidadeRepository, CidadeRepository>();
             services.AddScoped<IEstadoRepository, EstadoRepository>();

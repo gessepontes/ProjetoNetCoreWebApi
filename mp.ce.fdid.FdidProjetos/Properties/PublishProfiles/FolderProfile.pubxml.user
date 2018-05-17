@@ -6,6 +6,6 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\Users\gesse.pontes\Desktop\FdidProjetos</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\gesse.pontes.000\Desktop\FdidProjetos</_PublishTargetUrl>
   </PropertyGroup>
 </Project>
