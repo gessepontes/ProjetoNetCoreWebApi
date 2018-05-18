@@ -13,6 +13,7 @@ using System.Text;
 using System;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
+using mp.ce.fdid.Data.Repositories.Common;
 
 namespace mp.ce.fdid.FdidProjetos
 {
@@ -28,6 +29,8 @@ namespace mp.ce.fdid.FdidProjetos
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            RegisterMappings.Register();
+
             services.AddSingleton<IFileProvider>(
                 new PhysicalFileProvider(
                     Path.Combine(Directory.GetCurrentDirectory(), "wwwroot")));

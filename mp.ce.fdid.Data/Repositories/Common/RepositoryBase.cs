@@ -1,7 +1,4 @@
-﻿using mp.ce.fdid.Data.Mappings;
-using mp.ce.fdid.Domain.Interfaces.Repositories.Common;
-using Dapper.FluentMap;
-using Dapper.FluentMap.Dommel;
+﻿using mp.ce.fdid.Domain.Interfaces.Repositories.Common;
 using Dommel;
 using System;
 using System.Collections.Generic;
@@ -17,21 +14,6 @@ namespace mp.ce.fdid.Data.Repositories.Common
 
         public RepositoryBase()
         {
-            if (FluentMapper.EntityMaps.Count == 0)
-            {
-                FluentMapper.Initialize(c =>
-                {
-                    c.AddMap(mapper: new EstadoMap());
-                    c.AddMap(mapper: new CidadeMap());
-                    c.AddMap(mapper: new InstituicaoMap());
-                    c.AddMap(mapper: new ProjetoMap());
-                    c.AddMap(mapper: new ArquivoMap());
-                    c.AddMap(mapper: new PrazoMap());
-
-                    c.ForDommel();
-                });
-            }
-
             var config = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json")

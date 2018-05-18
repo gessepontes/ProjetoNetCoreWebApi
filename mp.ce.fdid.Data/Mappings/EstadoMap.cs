@@ -8,7 +8,9 @@ namespace mp.ce.fdid.Data.Mappings
         public EstadoMap()
         {
             ToTable("TB_ESTADO");
-            Map(p => p.iCodEstado).IsKey().IsIdentity();
+            Map(p => p.iCodEstado).ToColumn("iCodEstado").IsKey().IsIdentity();
+            Map(x => x.sNomeEstado).ToColumn("sNomeEstado");
+            Map(x => x.Cidade).Ignore();
         }
     }
 }
