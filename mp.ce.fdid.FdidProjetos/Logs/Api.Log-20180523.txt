@@ -1,0 +1,306 @@
+2018-05-23T10:10:12.9286463-03:00 0HLE0LQ1QP3PK:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49421/api/auth/   (ca22a1cb)
+2018-05-23T10:10:13.2147991-03:00 0HLE0LQ1QP3PK:00000001 [INF] Executing action method "mp.ce.fdid.FdidProjetos.Controllers.AuthController.Prazo (mp.ce.fdid.FdidProjetos)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-23T10:10:13.4372384-03:00 0HLE0LQ1QP3PK:00000001 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-05-23T10:10:13.5260011-03:00 0HLE0LQ1QP3PK:00000001 [INF] Executed action "mp.ce.fdid.FdidProjetos.Controllers.AuthController.Prazo (mp.ce.fdid.FdidProjetos)" in 355.3752ms (afa2e885)
+2018-05-23T10:10:13.5379571-03:00 0HLE0LQ1QP3PK:00000001 [INF] Request finished in 645.4944ms 200 application/json; charset=utf-8 (791a596a)
+2018-05-23T10:10:13.5549793-03:00 0HLE0LQ1QP3PK:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49421/favicon.ico   (ca22a1cb)
+2018-05-23T10:10:13.5675791-03:00 0HLE0LQ1QP3PK:00000002 [INF] Request finished in 11.471ms 404  (791a596a)
+2018-05-23T10:42:50.8789780-03:00 0HLE0MC9E13E8:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49421/api/auth/   (ca22a1cb)
+2018-05-23T10:42:51.1069512-03:00 0HLE0MC9E13E8:00000001 [INF] Executing action method "mp.ce.fdid.FdidProjetos.Controllers.AuthController.Prazo (mp.ce.fdid.FdidProjetos)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-23T10:42:51.2287146-03:00 0HLE0MC9E13E8:00000001 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-05-23T10:42:51.2949710-03:00 0HLE0MC9E13E8:00000001 [INF] Executed action "mp.ce.fdid.FdidProjetos.Controllers.AuthController.Prazo (mp.ce.fdid.FdidProjetos)" in 204.8761ms (afa2e885)
+2018-05-23T10:42:51.2996946-03:00 0HLE0MC9E13E8:00000001 [INF] Request finished in 446.6409ms 200 application/json; charset=utf-8 (791a596a)
+2018-05-23T10:42:51.3151569-03:00 0HLE0MC9E13E8:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49421/favicon.ico   (ca22a1cb)
+2018-05-23T10:42:51.3218440-03:00 0HLE0MC9E13E8:00000002 [INF] Request finished in 3.4821ms 404  (791a596a)
+2018-05-23T10:51:48.1021596-03:00 0HLE0MH9IM7O2:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49421/api/auth/   (ca22a1cb)
+2018-05-23T10:51:48.3624142-03:00 0HLE0MH9IM7O2:00000001 [INF] Executing action method "mp.ce.fdid.FdidProjetos.Controllers.AuthController.Prazo (mp.ce.fdid.FdidProjetos)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-23T10:51:48.4673890-03:00 0HLE0MH9IM7O2:00000001 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-05-23T10:51:48.5238698-03:00 0HLE0MH9IM7O2:00000001 [INF] Executed action "mp.ce.fdid.FdidProjetos.Controllers.AuthController.Prazo (mp.ce.fdid.FdidProjetos)" in 185.0816ms (afa2e885)
+2018-05-23T10:51:48.5294168-03:00 0HLE0MH9IM7O2:00000001 [INF] Request finished in 455.6106ms 200 application/json; charset=utf-8 (791a596a)
+2018-05-23T10:51:48.5434228-03:00 0HLE0MH9IM7O2:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49421/favicon.ico   (ca22a1cb)
+2018-05-23T10:51:48.5483940-03:00 0HLE0MH9IM7O2:00000002 [INF] Request finished in 3.0647ms 404  (791a596a)
+2018-05-23T10:53:06.5710951-03:00 0HLE0MH9IM7O5:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49421/api/auth/11111111111111/123456qQ   (ca22a1cb)
+2018-05-23T10:53:06.6246136-03:00 0HLE0MH9IM7O5:00000001 [INF] Executing action method "mp.ce.fdid.FdidProjetos.Controllers.AuthController.GetAuthenticate (mp.ce.fdid.FdidProjetos)" with arguments (["11111111111111", "123456qQ"]) - ModelState is Valid (ba7f4ac2)
+2018-05-23T10:53:14.8686478-03:00 0HLE0MH9IM7O5:00000001 [INF] Executed action "mp.ce.fdid.FdidProjetos.Controllers.AuthController.GetAuthenticate (mp.ce.fdid.FdidProjetos)" in 8269.8023ms (afa2e885)
+2018-05-23T10:53:14.9994277-03:00 0HLE0MH9IM7O5:00000001 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+System.Data.DataException: Error parsing column 30 (cPerfil=<null>) ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: value
+   at Dapper.SqlMapper.ReadChar(Object value) in C:\projects\dapper\Dapper\SqlMapper.cs:line 1880
+   at Deserializedd419099-daec-438f-b300-f4ff0b3b579c(IDataReader )
+   --- End of inner exception stack trace ---
+   at Dapper.SqlMapper.ThrowDataException(Exception ex, Int32 index, IDataReader reader, Object value) in C:\projects\dapper\Dapper\SqlMapper.cs:line 3609
+   at Deserializedd419099-daec-438f-b300-f4ff0b3b579c(IDataReader )
+   at Dapper.SqlMapper.<QueryImpl>d__136`1.MoveNext()
+   at System.Collections.Generic.List`1.AddEnumerable(IEnumerable`1 enumerable)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.Query[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Boolean buffered, Nullable`1 commandTimeout, Nullable`1 commandType)
+   at mp.ce.fdid.Data.Repositories.InstituicaoRepository.GetAuthenticate(String cnpj, String password)
+   at mp.ce.fdid.FdidProjetos.Controllers.AuthController.GetAuthenticate(String cnpj, String password)
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.<Invoke>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-05-23T10:53:15.0422852-03:00 0HLE0MH9IM7O5:00000001 [ERR] An exception was thrown attempting to display the error page. (33804fd3)
+System.InvalidOperationException: Operation is not valid due to the current state of the object.
+   at System.Reflection.MemberInfo.get_MetadataToken()
+   at Microsoft.Extensions.StackTrace.Sources.PortablePdbReader.PopulateStackFrame(StackFrameInfo frameInfo, MethodBase method, Int32 IlOffset)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.GetFrames(Exception exception)
+   at Microsoft.Extensions.StackTrace.Sources.ExceptionDetailsProvider.<GetDetails>d__3.MoveNext()
+   at Microsoft.AspNetCore.Diagnostics.RazorViews.ErrorPage.<ExecuteAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Extensions.RazorViews.BaseView.<ExecuteAsync>d__29.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-05-23T10:53:17.1365966-03:00 0HLE0MH9IM7O5:00000001 [ERR] Connection id ""0HLE0MH9IM7O5"", Request id ""0HLE0MH9IM7O5:00000001"": An unhandled exception was thrown by the application. (560e7d32)
+System.Data.DataException: Error parsing column 30 (cPerfil=<null>) ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: value
+   at Dapper.SqlMapper.ReadChar(Object value) in C:\projects\dapper\Dapper\SqlMapper.cs:line 1880
+   at Deserializedd419099-daec-438f-b300-f4ff0b3b579c(IDataReader )
+   --- End of inner exception stack trace ---
+   at Dapper.SqlMapper.ThrowDataException(Exception ex, Int32 index, IDataReader reader, Object value) in C:\projects\dapper\Dapper\SqlMapper.cs:line 3609
+   at Deserializedd419099-daec-438f-b300-f4ff0b3b579c(IDataReader )
+   at Dapper.SqlMapper.<QueryImpl>d__136`1.MoveNext()
+   at System.Collections.Generic.List`1.AddEnumerable(IEnumerable`1 enumerable)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.Query[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Boolean buffered, Nullable`1 commandTimeout, Nullable`1 commandType)
+   at mp.ce.fdid.Data.Repositories.InstituicaoRepository.GetAuthenticate(String cnpj, String password)
+   at mp.ce.fdid.FdidProjetos.Controllers.AuthController.GetAuthenticate(String cnpj, String password)
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.<Invoke>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Hosting.Internal.RequestServicesContainerMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Frame`1.<ProcessRequestsAsync>d__2.MoveNext()
+2018-05-23T10:53:17.1455361-03:00 0HLE0MH9IM7O5:00000001 [INF] Request finished in 10574.8135ms 500  (791a596a)
+2018-05-23T10:53:27.3653415-03:00 0HLE0MH9IM7O5:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49421/api/auth/11111111111111/123456qQ   (ca22a1cb)
+2018-05-23T10:53:27.3698472-03:00 0HLE0MH9IM7O5:00000002 [INF] Executing action method "mp.ce.fdid.FdidProjetos.Controllers.AuthController.GetAuthenticate (mp.ce.fdid.FdidProjetos)" with arguments (["11111111111111", "123456qQ"]) - ModelState is Valid (ba7f4ac2)
+2018-05-23T10:53:36.4405798-03:00 0HLE0MH9IM7O5:00000002 [INF] Executed action "mp.ce.fdid.FdidProjetos.Controllers.AuthController.GetAuthenticate (mp.ce.fdid.FdidProjetos)" in 9071.5675ms (afa2e885)
+2018-05-23T10:53:36.4665994-03:00 0HLE0MH9IM7O5:00000002 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+System.Data.DataException: Error parsing column 30 (cPerfil=<null>) ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: value
+   at Dapper.SqlMapper.ReadChar(Object value) in C:\projects\dapper\Dapper\SqlMapper.cs:line 1880
+   at Deserializedd419099-daec-438f-b300-f4ff0b3b579c(IDataReader )
+   --- End of inner exception stack trace ---
+   at Dapper.SqlMapper.ThrowDataException(Exception ex, Int32 index, IDataReader reader, Object value) in C:\projects\dapper\Dapper\SqlMapper.cs:line 3609
+   at Deserializedd419099-daec-438f-b300-f4ff0b3b579c(IDataReader )
+   at Dapper.SqlMapper.<QueryImpl>d__136`1.MoveNext()
+   at System.Collections.Generic.List`1.AddEnumerable(IEnumerable`1 enumerable)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.Query[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Boolean buffered, Nullable`1 commandTimeout, Nullable`1 commandType)
+   at mp.ce.fdid.Data.Repositories.InstituicaoRepository.GetAuthenticate(String cnpj, String password)
+   at mp.ce.fdid.FdidProjetos.Controllers.AuthController.GetAuthenticate(String cnpj, String password)
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.<Invoke>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-05-23T10:53:36.4879881-03:00 0HLE0MH9IM7O5:00000002 [ERR] An exception was thrown attempting to display the error page. (33804fd3)
+System.InvalidOperationException: Operation is not valid due to the current state of the object.
+   at System.Reflection.MemberInfo.get_MetadataToken()
+   at Microsoft.Extensions.StackTrace.Sources.PortablePdbReader.PopulateStackFrame(StackFrameInfo frameInfo, MethodBase method, Int32 IlOffset)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.GetFrames(Exception exception)
+   at Microsoft.Extensions.StackTrace.Sources.ExceptionDetailsProvider.<GetDetails>d__3.MoveNext()
+   at Microsoft.AspNetCore.Diagnostics.RazorViews.ErrorPage.<ExecuteAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Extensions.RazorViews.BaseView.<ExecuteAsync>d__29.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-05-23T10:53:36.5186975-03:00 0HLE0MH9IM7O5:00000002 [ERR] Connection id ""0HLE0MH9IM7O5"", Request id ""0HLE0MH9IM7O5:00000002"": An unhandled exception was thrown by the application. (560e7d32)
+System.Data.DataException: Error parsing column 30 (cPerfil=<null>) ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: value
+   at Dapper.SqlMapper.ReadChar(Object value) in C:\projects\dapper\Dapper\SqlMapper.cs:line 1880
+   at Deserializedd419099-daec-438f-b300-f4ff0b3b579c(IDataReader )
+   --- End of inner exception stack trace ---
+   at Dapper.SqlMapper.ThrowDataException(Exception ex, Int32 index, IDataReader reader, Object value) in C:\projects\dapper\Dapper\SqlMapper.cs:line 3609
+   at Deserializedd419099-daec-438f-b300-f4ff0b3b579c(IDataReader )
+   at Dapper.SqlMapper.<QueryImpl>d__136`1.MoveNext()
+   at System.Collections.Generic.List`1.AddEnumerable(IEnumerable`1 enumerable)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.Query[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Boolean buffered, Nullable`1 commandTimeout, Nullable`1 commandType)
+   at mp.ce.fdid.Data.Repositories.InstituicaoRepository.GetAuthenticate(String cnpj, String password)
+   at mp.ce.fdid.FdidProjetos.Controllers.AuthController.GetAuthenticate(String cnpj, String password)
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.<Invoke>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Hosting.Internal.RequestServicesContainerMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Frame`1.<ProcessRequestsAsync>d__2.MoveNext()
+2018-05-23T10:53:36.5264742-03:00 0HLE0MH9IM7O5:00000002 [INF] Request finished in 9163.2706ms 500  (791a596a)
+2018-05-23T10:54:57.1801011-03:00 0HLE0MH9IM7O5:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:49421/api/auth/11111111111111/123456qQ   (ca22a1cb)
+2018-05-23T10:54:57.1843274-03:00 0HLE0MH9IM7O5:00000003 [INF] Executing action method "mp.ce.fdid.FdidProjetos.Controllers.AuthController.GetAuthenticate (mp.ce.fdid.FdidProjetos)" with arguments (["11111111111111", "123456qQ"]) - ModelState is Valid (ba7f4ac2)
+2018-05-23T10:54:57.1881014-03:00 0HLE0MH9IM7O5:00000003 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-05-23T10:54:57.2232148-03:00 0HLE0MH9IM7O5:00000003 [INF] Executed action "mp.ce.fdid.FdidProjetos.Controllers.AuthController.GetAuthenticate (mp.ce.fdid.FdidProjetos)" in 41.3564ms (afa2e885)
+2018-05-23T10:54:57.2249206-03:00 0HLE0MH9IM7O5:00000003 [INF] Request finished in 45.0007ms 200 application/json; charset=utf-8 (791a596a)
