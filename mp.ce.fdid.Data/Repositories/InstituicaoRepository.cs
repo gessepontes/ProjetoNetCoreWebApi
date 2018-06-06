@@ -126,6 +126,30 @@ namespace mp.ce.fdid.Data.Repositories
             return list;
         }
 
+        public bool RemoveInstituicao(Instituicao obj)
+        {
+            conn.Open();
+
+            using (var transaction = conn.BeginTransaction())
+            {
+                try
+                {
+                    conn.Execute("DELETE TB_ARQUIVO WHERE IDInstituicaoProjeto = @IDProjeto AND iTipo = 1; ", new { IDProjeto = obj.ID }, transaction: transaction);
+                    conn.Execute("DELETE TB_INSTITUICAO WHERE ID = @ID; ", new { obj.ID }, transaction: transaction);
+
+                    transaction.Commit();
+                    return true;
+                }
+                catch (System.Exception e)
+                {
+                    e.Message.ToString();
+                    transaction.Rollback();
+                    return false;
+                }
+
+            }
+        }
+
 
         public Instituicao GetByIdInstituicao(int IdInstituicao)
         {
@@ -237,5 +261,8 @@ namespace mp.ce.fdid.Data.Repositories
             }
 
         }
+
+        public override IEnumerable<Instituicao> GetAll()  => conn.Query<Instituicao>("SELECT * FROM TB_INSTITUICAO").ToList();
+
     }
 }

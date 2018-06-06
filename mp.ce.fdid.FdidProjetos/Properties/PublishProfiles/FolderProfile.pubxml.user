@@ -8,4 +8,9 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <_PublishTargetUrl>C:\Users\gesse.pontes.000\Desktop\FdidProjetos</_PublishTargetUrl>
   </PropertyGroup>
+  <ItemGroup>
+    <File Include="appsettings.json">
+      <publishTime>05/17/2018 09:08:04</publishTime>
+    </File>
+  </ItemGroup>
 </Project>

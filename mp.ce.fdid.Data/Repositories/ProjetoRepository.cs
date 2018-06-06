@@ -48,13 +48,16 @@ namespace mp.ce.fdid.Data.Repositories
 
                     var returnId = conn.Query<int>(sql, new { obj.IDInstituicao, obj.sTitulo, obj.IDCidade, obj.dDataInicio, obj.dDataTermino, obj.mValor, obj.mValorContraPartida, obj.tResumo, obj.sNoProcesso, obj.dDataCadastro, obj.dDataMovimentacao }, transaction: transaction).SingleOrDefault();
 
-                    if (returnId != 0 && obj.sArea.Count() > 0)
+                    if (obj.sArea != null)
                     {
-                        foreach (var item in obj.sArea)
+                        if (returnId != 0 && obj.sArea.Count() > 0)
                         {
-                            conn.Execute(@"INSERT TB_AREAPROJETO(IDProjeto,iArea) values(@IDProjeto,@iArea)", new { IDProjeto = returnId, iArea = item }, transaction: transaction);
-                        }
+                            foreach (var item in obj.sArea)
+                            {
+                                conn.Execute(@"INSERT TB_AREAPROJETO(IDProjeto,iArea) values(@IDProjeto,@iArea)", new { IDProjeto = returnId, iArea = item }, transaction: transaction);
+                            }
 
+                        }
                     }
 
                     transaction.Commit();
@@ -101,9 +104,13 @@ namespace mp.ce.fdid.Data.Repositories
 
                     conn.Execute("DELETE TB_AREAPROJETO WHERE IDProjeto = @IDProjeto; ", new { IDProjeto = obj.ID }, transaction: transaction);
 
-                    foreach (var item in obj.sArea)
+                    if (obj.sArea != null)
                     {
-                        conn.Execute(@"INSERT TB_AREAPROJETO(IDProjeto,iArea) values(@IDProjeto,@iArea)", new { IDProjeto = obj.ID, iArea = item }, transaction: transaction);
+                        foreach (var item in obj.sArea)
+                        {
+                            conn.Execute(@"INSERT TB_AREAPROJETO(IDProjeto,iArea) values(@IDProjeto,@iArea)", new { IDProjeto = obj.ID, iArea = item }, transaction: transaction);
+                        }
+
                     }
 
                     transaction.Commit();
@@ -128,7 +135,7 @@ namespace mp.ce.fdid.Data.Repositories
                 try
                 {
                     conn.Execute("DELETE TB_AREAPROJETO WHERE IDProjeto = @IDProjeto; ", new { IDProjeto = obj.ID }, transaction: transaction);
-                    conn.Execute("DELETE TB_ARQUIVO WHERE IDInstituicaoProjeto = @IDProjeto; ", new { IDProjeto = obj.ID }, transaction: transaction);
+                    conn.Execute("DELETE TB_ARQUIVO WHERE IDInstituicaoProjeto = @IDProjeto AND iTipo = 2; ", new { IDProjeto = obj.ID }, transaction: transaction);
                     conn.Execute("DELETE TB_PROJETOS WHERE ID = @ID; ", new { obj.ID }, transaction: transaction);
 
                     transaction.Commit();
@@ -149,9 +156,9 @@ namespace mp.ce.fdid.Data.Repositories
         {
             var instituicaoDictionary = new Dictionary<int, Projeto>();
 
-            var list = conn.Query<Projeto, Instituicao,  Arquivo, Projeto>(
+            var list = conn.Query<Projeto, Instituicao, Arquivo, Projeto>(
                 @"SELECT * FROM TB_PROJETOS P INNER JOIN TB_INSTITUICAO I ON P.IDInstituicao = I.ID LEFT JOIN TB_ARQUIVO A ON P.ID = A.IDInstituicaoProjeto WHERE P.ID = @id",
-                map: (projeto, instituicao,  arquivoProjeto) =>
+                map: (projeto, instituicao, arquivoProjeto) =>
                 {
                     Projeto projetoEntry;
 
@@ -172,7 +179,8 @@ namespace mp.ce.fdid.Data.Repositories
 
             List<int> termsList = new List<int>();
 
-            if (list != null) {
+            if (list != null)
+            {
                 foreach (var item in conn.Query("select iArea from TB_AREAPROJETO WHERE IDProjeto =@IDProjeto", new { IDProjeto = list.ID }).ToList())
                 {
                     termsList.Add(item.iArea);
@@ -328,7 +336,7 @@ namespace mp.ce.fdid.Data.Repositories
                 {
                     _anexos.Add(Diversos.PathArquivo(item.sNome, "PROJETO"));
                 }
-                
+
             }
 
             strBody = "";
@@ -355,13 +363,18 @@ namespace mp.ce.fdid.Data.Repositories
 
             string sTitulo;
 
-            if (iTipo == 1) {
+            if (iTipo == 1)
+            {
                 sTitulo = "Cadastro de Projetos FDID";
-            } else {
+            }
+            else
+            {
                 sTitulo = "Atualização do Projetos FDID";
             }
 
             Diversos.SendEmail(config.GetSection(key: "Config")["sEmailSend"], sTitulo, strBody, _anexos, _projeto.Instituicao.sEmail);
         }
+
+        public override IEnumerable<Projeto> GetAll() => conn.Query<Projeto>("SELECT * FROM TB_PROJETOS").ToList();
     }
 }

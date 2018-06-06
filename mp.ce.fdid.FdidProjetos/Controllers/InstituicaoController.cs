@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using mp.ce.fdid.Domain.Entities;
 using mp.ce.fdid.Domain.Interfaces;
+using System.Collections.Generic;
 
 namespace mp.ce.fdid.FdidProjetos.Controllers
 {
@@ -24,6 +25,12 @@ namespace mp.ce.fdid.FdidProjetos.Controllers
         public Instituicao Get(int id)
         {
             return _instituicaoRepository.GetById(id);
+        }
+
+        [Authorize]
+        public IEnumerable<Instituicao> Get()
+        {
+            return _instituicaoRepository.GetAll();
         }
 
         // POST: api/Instituicao
@@ -67,7 +74,7 @@ namespace mp.ce.fdid.FdidProjetos.Controllers
             try
             {
                 var _instituicao = _instituicaoRepository.GetById(id);
-                _instituicaoRepository.Remove(_instituicao);
+                _instituicaoRepository.RemoveInstituicao(_instituicao);
                 return 1;
             }
             catch (System.Exception)

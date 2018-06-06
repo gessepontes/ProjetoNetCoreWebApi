@@ -18,6 +18,7 @@ namespace mp.ce.fdid.FdidProjetos.Controllers
         }
 
         // GET: api/Projeto
+        [Authorize]
         public IEnumerable<Projeto> Get()
         {
             return _projetoRepository.GetAll();
