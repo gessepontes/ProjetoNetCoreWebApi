@@ -24,6 +24,7 @@ namespace mp.ce.fdid.Domain.Entities
         public string sHomePage { get; set; }
         public int iRegime { get; set; }
         public int iEsfera { get; set; }
+        public int iNatureza { get; set; }
         public string sRepresentante { get; set; }
         public string sCpfRepresentante { get; set; }
         public string sCargo { get; set; }

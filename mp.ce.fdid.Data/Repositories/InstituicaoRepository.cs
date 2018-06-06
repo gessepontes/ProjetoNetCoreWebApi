@@ -21,7 +21,7 @@ namespace mp.ce.fdid.Data.Repositories
         {
             string sql = "";
 
-            sql = "INSERT INTO TB_INSTITUICAO VALUES (@sProponente,@sCNPJ,@sEndereco,@sCep,@sTelefone,@sFax,@IDCidade,@sEmail,@sHomePage,@iRegime,@iEsfera,@sRepresentante,@sCpfRepresentante," +
+            sql = "INSERT INTO TB_INSTITUICAO VALUES (@sProponente,@sCNPJ,@sEndereco,@sCep,@sTelefone,@sFax,@IDCidade,@sEmail,@sHomePage,@iRegime,@iEsfera,@iNatureza,@sRepresentante,@sCpfRepresentante," +
                 "@sCargo,@sFuncao,@sRG,@sOrgaoExpedidor,@sEnderecoRepresentante,@sTelefoneRepresentante,@sCepRepresentante,@sCoordenador," +
                 "@sCPFCoordenador,@sTelefoneCoordenador,@sFaxCoordenador,getdate(),@sSenha,getdate(),'',null,'U')";
 
@@ -38,6 +38,7 @@ namespace mp.ce.fdid.Data.Repositories
                 obj.sHomePage,
                 obj.iRegime,
                 obj.iEsfera,
+                obj.iNatureza,
                 obj.sRepresentante,
                 obj.sCpfRepresentante,
                 obj.sCargo,
@@ -64,7 +65,7 @@ namespace mp.ce.fdid.Data.Repositories
 
             if (obj.sSenha != "") parametros = ",sSenha=@sSenha";
 
-            sql = "UPDATE TB_INSTITUICAO SET sProponente=@sProponente,sCNPJ=@sCNPJ,sEndereco=@sEndereco,sCep=@sCep,sTelefone=@sTelefone,sFax=@sFax,IDCidade=@IDCidade,sEmail=@sEmail,sHomePage=@sHomePage,iRegime=@iRegime,iEsfera=@iEsfera,sRepresentante=@sRepresentante,sCpfRepresentante=@sCpfRepresentante," +
+            sql = "UPDATE TB_INSTITUICAO SET sProponente=@sProponente,sCNPJ=@sCNPJ,sEndereco=@sEndereco,sCep=@sCep,sTelefone=@sTelefone,sFax=@sFax,IDCidade=@IDCidade,sEmail=@sEmail,sHomePage=@sHomePage,iRegime=@iRegime,iEsfera=@iEsfera,iNatureza=@iNatureza,sRepresentante=@sRepresentante,sCpfRepresentante=@sCpfRepresentante," +
                 "sCargo=@sCargo,sFuncao=@sFuncao,sRG=@sRG,sOrgaoExpedidor=@sOrgaoExpedidor,sEnderecoRepresentante=@sEnderecoRepresentante,sTelefoneRepresentante=@sTelefoneRepresentante,sCepRepresentante=@sCepRepresentante,sCoordenador=@sCoordenador," +
                 "sCPFCoordenador=@sCPFCoordenador,sTelefoneCoordenador=@sTelefoneCoordenador,sFaxCoordenador=@sFaxCoordenador,dDataMovimentacao=getdate() " + parametros + " WHERE ID = @ID; ";
 
@@ -81,6 +82,7 @@ namespace mp.ce.fdid.Data.Repositories
                 obj.sHomePage,
                 obj.iRegime,
                 obj.iEsfera,
+                obj.iNatureza,
                 obj.sRepresentante,
                 obj.sCpfRepresentante,
                 obj.sCargo,
