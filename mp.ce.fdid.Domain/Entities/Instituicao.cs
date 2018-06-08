@@ -39,6 +39,8 @@ namespace mp.ce.fdid.Domain.Entities
         public string sTelefoneCoordenador { get; set; }
         public string sFaxCoordenador { get; set; }
         public char cPerfil { get; set; }
+        public string sCelularCoordenador { get; set; }
+        public string sCelularRepresentante { get; set; }
 
         string SENHA;
         public string sSenha

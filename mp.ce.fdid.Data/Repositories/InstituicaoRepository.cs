@@ -23,7 +23,7 @@ namespace mp.ce.fdid.Data.Repositories
 
             sql = "INSERT INTO TB_INSTITUICAO VALUES (@sProponente,@sCNPJ,@sEndereco,@sCep,@sTelefone,@sFax,@IDCidade,@sEmail,@sHomePage,@iRegime,@iEsfera,@iNatureza,@sRepresentante,@sCpfRepresentante," +
                 "@sCargo,@sFuncao,@sRG,@sOrgaoExpedidor,@sEnderecoRepresentante,@sTelefoneRepresentante,@sCepRepresentante,@sCoordenador," +
-                "@sCPFCoordenador,@sTelefoneCoordenador,@sFaxCoordenador,getdate(),@sSenha,getdate(),'',null,'U')";
+                "@sCPFCoordenador,@sTelefoneCoordenador,@sFaxCoordenador,getdate(),@sSenha,getdate(),'',null,'U',@sCelularCoordenador,@sCelularRepresentante)";
 
             conn.Execute(sql, new
             {
@@ -53,7 +53,9 @@ namespace mp.ce.fdid.Data.Repositories
                 obj.sTelefoneCoordenador,
                 obj.sFaxCoordenador,
                 obj.sSenha,
-                obj.ID
+                obj.ID,
+                obj.sCelularCoordenador,
+                obj.sCelularRepresentante
             });
         }
 
@@ -67,7 +69,7 @@ namespace mp.ce.fdid.Data.Repositories
 
             sql = "UPDATE TB_INSTITUICAO SET sProponente=@sProponente,sCNPJ=@sCNPJ,sEndereco=@sEndereco,sCep=@sCep,sTelefone=@sTelefone,sFax=@sFax,IDCidade=@IDCidade,sEmail=@sEmail,sHomePage=@sHomePage,iRegime=@iRegime,iEsfera=@iEsfera,iNatureza=@iNatureza,sRepresentante=@sRepresentante,sCpfRepresentante=@sCpfRepresentante," +
                 "sCargo=@sCargo,sFuncao=@sFuncao,sRG=@sRG,sOrgaoExpedidor=@sOrgaoExpedidor,sEnderecoRepresentante=@sEnderecoRepresentante,sTelefoneRepresentante=@sTelefoneRepresentante,sCepRepresentante=@sCepRepresentante,sCoordenador=@sCoordenador," +
-                "sCPFCoordenador=@sCPFCoordenador,sTelefoneCoordenador=@sTelefoneCoordenador,sFaxCoordenador=@sFaxCoordenador,dDataMovimentacao=getdate() " + parametros + " WHERE ID = @ID; ";
+                "sCPFCoordenador=@sCPFCoordenador,sTelefoneCoordenador=@sTelefoneCoordenador,sFaxCoordenador=@sFaxCoordenador,dDataMovimentacao=getdate(),sCelularCoordenador=@sCelularCoordenador,sCelularRepresentante=@sCelularRepresentante " + parametros + " WHERE ID = @ID; ";
 
             conn.Execute(sql, new
             {
@@ -97,7 +99,9 @@ namespace mp.ce.fdid.Data.Repositories
                 obj.sTelefoneCoordenador,
                 obj.sFaxCoordenador,
                 obj.sSenha,
-                obj.ID
+                obj.ID,
+                obj.sCelularCoordenador,
+                obj.sCelularRepresentante
             });
         }
 
@@ -265,6 +269,9 @@ namespace mp.ce.fdid.Data.Repositories
         }
 
         public override IEnumerable<Instituicao> GetAll()  => conn.Query<Instituicao>("SELECT * FROM TB_INSTITUICAO").ToList();
+
+        public bool GetValorContra(int id) => conn.Query<bool>("SELECT count(*) FROM TB_INSTITUICAO WHERE iNatureza = 1 AND ID=@id", new { id }).FirstOrDefault();
+        
 
     }
 }

@@ -33,6 +33,12 @@ namespace mp.ce.fdid.FdidProjetos.Controllers
             return _instituicaoRepository.GetAll();
         }
 
+        [HttpGet("GetValorContra/{id}", Name = "GetValorContra")]
+        public bool GetValorContra(int id)
+        {
+            return _instituicaoRepository.GetValorContra(id);
+        }
+
         // POST: api/Instituicao
         [HttpPost]
         public int Post([FromBody]Instituicao _instituicao)

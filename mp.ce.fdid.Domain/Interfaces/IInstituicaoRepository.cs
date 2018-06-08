@@ -11,5 +11,6 @@ namespace mp.ce.fdid.Domain.Interfaces
         Auth GetHash(string hash);
         int GetSend(string cnpj);
         int GetChangerPassword(string cnpj, string password);
+        bool GetValorContra(int id);
     }
 }
