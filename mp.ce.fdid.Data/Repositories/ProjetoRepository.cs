@@ -334,7 +334,7 @@ namespace mp.ce.fdid.Data.Repositories
             {
                 if (item != null)
                 {
-                    _anexos.Add(Diversos.PathArquivo(item.sNome, "PROJETO"));
+                    _anexos.Add(Diversos.PathArquivo(item.sNomebase, "PROJETO"));
                 }
 
             }
@@ -356,6 +356,8 @@ namespace mp.ce.fdid.Data.Repositories
             strBody = strBody + "<tr><td font-weight:bold'><p><p></td></tr> ";
             strBody = strBody + _body;
             strBody = strBody + "</table> ";
+            strBody = strBody + "<br><br>";
+            strBody = strBody + "<a href='" + config.GetSection(key: "Config")["sSite"]  + "'>Clique aqui para visualizar o projeto na íntegra, incluindo arquivos anexados!<a>";
             strBody = strBody + "<br><br>";
             strBody = strBody + "Esta é uma  mensagem automática enviada pelo sistema. Não precisa responder.";
             strBody = strBody + "</body>";
