@@ -271,7 +271,8 @@ namespace mp.ce.fdid.Data.Repositories
         public override IEnumerable<Instituicao> GetAll()  => conn.Query<Instituicao>("SELECT * FROM TB_INSTITUICAO").ToList();
 
         public bool GetValorContra(int id) => conn.Query<bool>("SELECT count(*) FROM TB_INSTITUICAO WHERE iNatureza = 1 AND ID=@id", new { id }).FirstOrDefault();
-        
+        public bool GetTestCnpj(string cnpj) => conn.Query<bool>("SELECT count(*) FROM TB_INSTITUICAO WHERE sCNPJ=@cnpj", new { cnpj }).FirstOrDefault();
+
 
     }
 }

@@ -39,6 +39,12 @@ namespace mp.ce.fdid.FdidProjetos.Controllers
             return _instituicaoRepository.GetValorContra(id);
         }
 
+        [HttpGet("GetTestCnpj/{cnpj}", Name = "GetTestCnpj")]
+        public bool GetTestCnpj(string cnpj)
+        {
+            return _instituicaoRepository.GetTestCnpj(cnpj);
+        }
+
         // POST: api/Instituicao
         [HttpPost]
         public int Post([FromBody]Instituicao _instituicao)

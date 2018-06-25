@@ -12,5 +12,7 @@ namespace mp.ce.fdid.Domain.Interfaces
         int GetSend(string cnpj);
         int GetChangerPassword(string cnpj, string password);
         bool GetValorContra(int id);
+        bool GetTestCnpj(string cnpj);
+
     }
 }
