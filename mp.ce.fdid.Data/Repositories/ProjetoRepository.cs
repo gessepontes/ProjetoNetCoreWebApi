@@ -367,7 +367,7 @@ namespace mp.ce.fdid.Data.Repositories
 
             if (iTipo == 1)
             {
-                sTitulo = "Cadastro de Projetos FDID";
+                sTitulo = "[PROJETOS FDID] Novo projeto cadastrado";
             }
             else
             {

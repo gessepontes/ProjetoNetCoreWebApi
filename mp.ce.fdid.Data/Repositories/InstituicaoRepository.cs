@@ -17,15 +17,15 @@ namespace mp.ce.fdid.Data.Repositories
     public class InstituicaoRepository : RepositoryBase<Instituicao>, IInstituicaoRepository
     {
 
-        public override void Add(Instituicao obj)
+        public int AddInstituicao(Instituicao obj)
         {
             string sql = "";
 
             sql = "INSERT INTO TB_INSTITUICAO VALUES (@sProponente,@sCNPJ,@sEndereco,@sCep,@sTelefone,@sFax,@IDCidade,@sEmail,@sHomePage,@iRegime,@iEsfera,@iNatureza,@sRepresentante,@sCpfRepresentante," +
                 "@sCargo,@sFuncao,@sRG,@sOrgaoExpedidor,@sEnderecoRepresentante,@sTelefoneRepresentante,@sCepRepresentante,@sCoordenador," +
-                "@sCPFCoordenador,@sTelefoneCoordenador,@sFaxCoordenador,getdate(),@sSenha,getdate(),'',null,'U',@sCelularCoordenador,@sCelularRepresentante)";
+                "@sCPFCoordenador,@sTelefoneCoordenador,@sFaxCoordenador,getdate(),@sSenha,getdate(),'',null,'U',@sCelularCoordenador,@sCelularRepresentante) SELECT CAST(SCOPE_IDENTITY() as int)";
 
-            conn.Execute(sql, new
+            return conn.Query<int>(sql, new
             {
                 obj.sProponente,
                 obj.sCNPJ,
@@ -56,7 +56,7 @@ namespace mp.ce.fdid.Data.Repositories
                 obj.ID,
                 obj.sCelularCoordenador,
                 obj.sCelularRepresentante
-            });
+            }).SingleOrDefault(); 
         }
 
 
@@ -272,6 +272,119 @@ namespace mp.ce.fdid.Data.Repositories
 
         public bool GetValorContra(int id) => conn.Query<bool>("SELECT count(*) FROM TB_INSTITUICAO WHERE iNatureza = 1 AND ID=@id", new { id }).FirstOrDefault();
         public bool GetTestCnpj(string cnpj) => conn.Query<bool>("SELECT count(*) FROM TB_INSTITUICAO WHERE sCNPJ=@cnpj", new { cnpj }).FirstOrDefault();
+
+
+        public void SendEmail(int IDInstituicao)
+        {
+            string _body = "";
+            string strBody = "";
+
+            var config = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .Build();
+
+            Instituicao _instituicao = GetById(IDInstituicao);
+
+            _body = "<tr bgcolor='#D6EFDA'><td colspan=2  style='font-weight:bold'>INSTITUIÇÃO</td></tr>";
+            _body += "<tr style='=font-weight:bold;'>";
+            _body += "<td font-weight:bold'><b>Proponente: </b>" + _instituicao.sProponente + "</td>";
+            _body += "<td font-weight:bold'><b>CNPJ: </b>" + _instituicao.sCNPJ + "</td></tr>";
+
+            _body += "<tr style='=font-weight:bold;'>";
+            _body += "<td font-weight:bold'><b>Endereço: </b>" + _instituicao.sEndereco + "</td>";
+            _body += "<td font-weight:bold'><b>CEP: </b>" + _instituicao.sCep + "</td></tr>";
+
+            _body += "<tr style='=font-weight:bold;'>";
+            _body += "<td font-weight:bold'><b>Telefone: </b>" + _instituicao.sTelefone + "</td>";
+            _body += "<td font-weight:bold'<b>Fax: </b>" + _instituicao.sFax + "</td></tr>";
+
+            _body += "<tr style='=font-weight:bold;'>";
+            _body += "<td font-weight:bold' colspan=2><b>Municipio: </b>" + _instituicao.IDCidade + "</td></tr>";
+
+            _body += "<tr style='=font-weight:bold;'>";
+            _body += "<td font-weight:bold'<b>Email: </b>" + _instituicao.sEmail + "</td>";
+            _body += "<td font-weight:bold'><b>HomePage: </b>" + _instituicao.sHomePage + "</td></tr>";
+
+            _body += "<tr style='=font-weight:bold;'>";
+
+            switch (_instituicao.iRegime)
+            {
+                case 1:
+                    _body += "<td font-weight:bold'<b>Regime: </b>Direito Público</td>";
+
+                    break;
+                case 2:
+                    _body += "<td font-weight:bold'<b>Regime: </b>Direito Privado</td>";
+
+                    break;
+            }
+
+            switch (_instituicao.iEsfera)
+            {
+                case 1:
+                    _body += "<td font-weight:bold'<b>Esfera: </b>Federal</td></tr>";
+                    break;
+                case 2:
+                    _body += "<td font-weight:bold'<b>Esfera: </b>Estadual</td></tr>";
+                    break;
+                case 3:
+                    _body += "<td font-weight:bold'<b>Esfera: </b>Municipal</td></tr>";
+                    break;
+                case 4:
+                    _body += "<td font-weight:bold'<b>Esfera: </b>Organização Ambientalista</td></tr>";
+                    break;
+                case 5:
+                    _body += "<td font-weight:bold'<b>Esfera: </b>Outros</td></tr>";
+                    break;
+            }
+
+            _body += "<tr bgcolor='#D6EFDA'><td colspan=2  style='font-weight:bold'>REPRESENTANTE</td></tr>";
+
+            _body += "<td font-weight:bold'><b>Representante: </b>" + _instituicao.sRepresentante + "</td>";
+            _body += "<td font-weight:bold'><b>Cpf: </b>" + _instituicao.sCpfRepresentante + "</td>";
+            _body += "<tr><td font-weight:bold'><b>Cargo: </b>" + _instituicao.sCargo + "</td>";
+            _body += "<td font-weight:bold'><b>Função: </b>" + _instituicao.sFuncao + "</td></tr>";
+            _body += "<tr><td font-weight:bold'><b>Rg: </b>" + _instituicao.sRG + "</td>";
+            _body += "<td font-weight:bold'><b>Órgão Expedidor: </b>" + _instituicao.sOrgaoExpedidor + "</td></tr>";
+            _body += "<tr><td font-weight:bold' colspan=2><b>Endereço Representante: </b>" + _instituicao.sEnderecoRepresentante + "</td></tr>";
+            _body += "<tr><td font-weight:bold'><b>Telefone: </b>" + _instituicao.sTelefoneRepresentante + "</td>";
+            _body += "<td font-weight:bold'><b>CEP: </b>" + _instituicao.sCepRepresentante + "</td></tr>";
+
+            _body += "<tr bgcolor='#D6EFDA'><td colspan=2  style='font-weight:bold'>COORDENADOR</td></tr>";
+            _body += "<tr><td font-weight:bold'><b>Coordenador: </b>" + _instituicao.sCoordenador + "</td>";
+            _body += "<td font-weight:bold'><b>Cpf: </b>" + _instituicao.sCPFCoordenador + "</td></tr>";
+            _body += "<tr><td font-weight:bold'><b>Telefone: </b>" + _instituicao.sTelefoneCoordenador + "</TD>";
+            _body += "<td font-weight:bold'><b>Fax: </b>" + _instituicao.sFaxCoordenador + "</td></tr>";
+
+            strBody = "";
+            strBody = strBody + "<html>";
+            strBody = strBody + "<head>";
+            strBody = strBody + "<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'>";
+            strBody = strBody + "<title>Untitled Document</title>";
+            strBody = strBody + "</head>";
+            strBody = strBody + "<body>";
+
+            strBody = strBody + "<table style='font-family: verdana; font-size: 11px; color: #000000;' width='100%'>";
+            strBody = strBody + "<tr align=center><td colspan=2><img src='cid:Imagem1' /></td></tr>";
+            strBody = strBody + "<tr align=center><td colspan=2></td></tr>";
+            strBody = strBody + "<tr style='=font-weight:bold;' align=center><td colspan=2>PROCURADORIA GERAL DE JUSTIÇA</td></tr>";
+            strBody = strBody + "<tr style='=font-weight:bold;' align=center><td colspan=2>MINISTÉRIO PÚBLICO DO ESTADO DO CEARÁ</td></tr>";
+
+            strBody = strBody + "<tr><td font-weight:bold'><p><p></td></tr> ";
+            strBody = strBody + _body;
+            strBody = strBody + "</table> ";
+            strBody = strBody + "<br><br>";
+            strBody = strBody + "ATENÇÃO: O cadastro da instituição somente estará completo após a anexação dos arquivos relacionados à documentação comprobatória exigida em edital! ";
+            strBody = strBody + "<a href='" + config.GetSection(key: "Config")["sSite"] + "'>Clique AQUI<a>";
+            strBody = strBody + " para entrar no sistema e concluir o cadastro anexando os arquivos necessários.";
+            strBody = strBody + "<br><br>";
+            strBody = strBody + "Esta é uma  mensagem automática enviada pelo sistema. Não precisa responder.";
+            strBody = strBody + "</body>";
+            strBody = strBody + "</html>";
+
+            Diversos.SendEmail(config.GetSection(key: "Config")["sEmailSend"], "[PROJETOS FDID] Nova instituição cadastrada", strBody, null, _instituicao.sEmail);
+        }
 
 
     }

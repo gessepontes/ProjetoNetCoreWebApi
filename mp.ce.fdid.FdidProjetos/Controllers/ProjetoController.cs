@@ -51,7 +51,7 @@ namespace mp.ce.fdid.FdidProjetos.Controllers
                 if (IDProjeto != 0)
                 {
                     _projetoRepository.SendEmail(IDProjeto, 1);
-                    return 1;
+                    return IDProjeto;
                 }
                 else
                 {

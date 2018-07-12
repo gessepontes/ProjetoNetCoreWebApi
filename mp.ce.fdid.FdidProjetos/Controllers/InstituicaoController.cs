@@ -51,7 +51,7 @@ namespace mp.ce.fdid.FdidProjetos.Controllers
         {
             try
             {
-                _instituicaoRepository.Add(_instituicao);
+                _instituicaoRepository.SendEmail(_instituicaoRepository.AddInstituicao(_instituicao));
                 return 1;
             }
             catch (System.Exception e)
