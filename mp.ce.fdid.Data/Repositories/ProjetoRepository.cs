@@ -151,13 +151,24 @@ namespace mp.ce.fdid.Data.Repositories
             }
         }
 
+        public override IEnumerable<Projeto> GetAll()
+        {
+            return conn.Query<Projeto, Instituicao, Projeto>(
+                @"SELECT * FROM TB_PROJETOS P INNER JOIN TB_INSTITUICAO I ON P.IDInstituicao = I.ID  ",
+                map: (projeto, instituicao) =>
+                {
+                    projeto.Instituicao = instituicao;
+
+                    return projeto;
+                }).OrderBy(p => p.Instituicao.sProponente).ThenBy(p => p.sTitulo);
+        }
 
         public override Projeto GetById(int? id)
         {
             var instituicaoDictionary = new Dictionary<int, Projeto>();
 
             var list = conn.Query<Projeto, Instituicao, Arquivo, Projeto>(
-                @"SELECT * FROM TB_PROJETOS P INNER JOIN TB_INSTITUICAO I ON P.IDInstituicao = I.ID LEFT JOIN TB_ARQUIVO A ON P.ID = A.IDInstituicaoProjeto WHERE P.ID = @id",
+                @"SELECT * FROM TB_PROJETOS P INNER JOIN TB_INSTITUICAO I ON P.IDInstituicao = I.ID LEFT JOIN TB_ARQUIVO A ON P.ID = A.IDInstituicaoProjeto AND A.iTipo = 2 WHERE P.ID = @id",
                 map: (projeto, instituicao, arquivoProjeto) =>
                 {
                     Projeto projetoEntry;
@@ -357,7 +368,7 @@ namespace mp.ce.fdid.Data.Repositories
             strBody = strBody + _body;
             strBody = strBody + "</table> ";
             strBody = strBody + "<br><br>";
-            strBody = strBody + "<a href='" + config.GetSection(key: "Config")["sSite"]  + "'>Clique aqui para visualizar o projeto na íntegra, incluindo arquivos anexados!<a>";
+            strBody = strBody + "<a href='" + config.GetSection(key: "Config")["sSite"] + "'>Clique aqui para visualizar o projeto na íntegra, incluindo arquivos anexados!<a>";
             strBody = strBody + "<br><br>";
             strBody = strBody + "Esta é uma  mensagem automática enviada pelo sistema. Não precisa responder.";
             strBody = strBody + "</body>";
@@ -376,7 +387,5 @@ namespace mp.ce.fdid.Data.Repositories
 
             Diversos.SendEmail(config.GetSection(key: "Config")["sEmailSend"], sTitulo, strBody, _anexos, _projeto.Instituicao.sEmail);
         }
-
-        public override IEnumerable<Projeto> GetAll() => conn.Query<Projeto>("SELECT * FROM TB_PROJETOS").ToList();
     }
 }

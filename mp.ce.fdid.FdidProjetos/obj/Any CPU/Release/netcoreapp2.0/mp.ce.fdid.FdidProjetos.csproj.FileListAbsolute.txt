@@ -14,3 +14,4 @@ C:\SVN\FDID\Fdid\mp.ce.fdid.FdidProjetos\obj\Any CPU\Release\netcoreapp2.0\mp.ce
 C:\SVN\FDID\Fdid\mp.ce.fdid.FdidProjetos\obj\Any CPU\Release\netcoreapp2.0\mp.ce.fdid.FdidProjetos.AssemblyInfo.cs
 C:\SVN\FDID\Fdid\mp.ce.fdid.FdidProjetos\obj\Any CPU\Release\netcoreapp2.0\mp.ce.fdid.FdidProjetos.dll
 C:\SVN\FDID\Fdid\mp.ce.fdid.FdidProjetos\obj\Any CPU\Release\netcoreapp2.0\mp.ce.fdid.FdidProjetos.pdb
+C:\SVN\FDID\Fdid\mp.ce.fdid.FdidProjetos\obj\Any CPU\Release\netcoreapp2.0\mp.ce.fdid.FdidProjetos.csprojResolveAssemblyReference.cache
