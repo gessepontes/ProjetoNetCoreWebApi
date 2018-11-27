@@ -13,6 +13,9 @@ namespace mp.ce.fdid.FdidProjetos
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseKestrel()
+                .UseSetting(WebHostDefaults.DetailedErrorsKey, "true")
+                .UseIISIntegration()
                 .UseStartup<Startup>()
                 .Build();
     }
